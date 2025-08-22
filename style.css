@@ -41,19 +41,46 @@ a {
   border-radius: 1rem;
 }
 
+/* ---- FIXED CTA BUTTONS ---- */
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
 .cta-buttons .btn {
-  padding: 0.7rem 1.2rem;
-  margin-right: 10px;
+  padding: 0.8rem 1.5rem;
   border-radius: 10px;
   background: #66d9ef;
   color: #1e1e2f;
   font-weight: bold;
   transition: background 0.3s;
+  text-align: center;
+  flex: 1; /* makes buttons equal width */
+  min-width: 150px;
 }
 
 .cta-buttons .btn:hover {
   background: #5ec5dc;
 }
+
+.cta-buttons .btn-secondary {
+  background: #333;
+  color: #f0f0f0;
+}
+
+@media (max-width: 480px) {
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+  }
+}
+/* ---- END CTA BUTTON FIX ---- */
 
 .nav-bar {
   display: flex;
